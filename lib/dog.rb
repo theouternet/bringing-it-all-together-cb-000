@@ -63,7 +63,6 @@ end
   DB[:conn].execute(sql, id).map do |row|
     self.new_from_db(row)
   end.first 
-
   end 
   
   def self.find_or_create_by
