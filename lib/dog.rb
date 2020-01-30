@@ -67,8 +67,9 @@ end
   
   def self.find_or_create_by
     if self.id == nil
-      self.update
-    else 
+      self.create(name:, breed:)
+    end
+     
   end 
   
   def self.find_by_name 
