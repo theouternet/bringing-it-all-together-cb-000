@@ -30,6 +30,12 @@ class Dog
   def save 
     if self.id 
       self.update
+    else 
+    sql = <<-SQL
+    DROP TABLE IF EXISTS dogs
+    SQL
+    
+    
   end 
   
   def self.create 
