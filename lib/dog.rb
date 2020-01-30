@@ -46,7 +46,9 @@ class Dog
   
   def self.new_from_db 
     sql = <<-SQL
-    INSERT INTO dogs (name, breed)
+   SELECT *
+   FROM dogs
+   (name, breed)
     VALUES (?,?)
     SQL
     Dog.new
