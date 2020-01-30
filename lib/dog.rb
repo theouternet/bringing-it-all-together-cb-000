@@ -55,7 +55,7 @@ end
   end 
   
   def self.find_by_id
-
+Deg
     
     
   end 
