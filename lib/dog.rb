@@ -76,6 +76,10 @@ end
   
   dog = DB[:conn].execute(sql,name,breed)
      
+     if !dog.empty?
+       dd = dog[0]
+       dog = 
+     
   end 
   
   def self.find_by_name 
