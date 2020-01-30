@@ -78,8 +78,11 @@ end
      
      if !dog.empty?
        dd = dog[0]
-       dog = 
-     
+       dog = Dog.new(id: dd[0], name: dd[1], breed: dd[2])
+     else
+       dog = self.create(name: name, breed: breed)
+     end
+     dog 
   end 
   
   def self.find_by_name 
