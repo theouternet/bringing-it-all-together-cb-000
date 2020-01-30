@@ -66,7 +66,7 @@ end
   end 
   
   def self.find_or_create_by
-    if self.id 
+    if self.id == nil
       self.update
     else 
   end 
