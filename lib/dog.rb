@@ -69,7 +69,9 @@ end
     sql = <<-SQL
     SELECT *
     FROM dogs
-    WHERE id = ?
+    WHERE name = ?
+    AND breed = ?
+    LIMIT 1
     SQL
   
     if self.id == nil
