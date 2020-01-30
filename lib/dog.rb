@@ -74,9 +74,7 @@ end
     LIMIT 1
     SQL
   
-    if self.id == nil
-      self.create(name:, breed:)
-    end
+  dog = DB[:conn].execute(sql,name,breed)
      
   end 
   
