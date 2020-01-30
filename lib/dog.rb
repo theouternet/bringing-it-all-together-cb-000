@@ -66,7 +66,9 @@ end
   end 
   
   def self.find_or_create_by
-    
+    if self.id 
+      self.update
+    else 
   end 
   
   def self.find_by_name 
