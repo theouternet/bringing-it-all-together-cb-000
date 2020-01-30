@@ -65,7 +65,13 @@ end
   end.first 
   end 
   
-  def self.find_or_create_by
+  def self.find_or_create_by(name:, breed:)
+    sql = <<-SQL
+    SELECT *
+    FROM dogs
+    WHERE id = ?
+    SQL
+  
     if self.id == nil
       self.create(name:, breed:)
     end
