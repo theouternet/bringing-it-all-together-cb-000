@@ -22,7 +22,7 @@ class Dog
   
   def self.drop_table 
     sql = <<-SQL
-    CREATE TABLE IF NOT EXISTS dogs (
+    DROP TABLE IF EXISTS dogs (
     id INTEGER PRIMARY KEY,
     name TEXT,
     breed TEXT
