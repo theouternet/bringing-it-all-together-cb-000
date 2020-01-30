@@ -45,7 +45,11 @@ class Dog
   end 
   
   def self.new_from_db 
-    
+    sql = <<-SQL
+    INSERT INTO dogs (name, breed)
+    VALUES (?,?)
+    SQL
+    Dog.new
   end 
   
   def self.find_by_id
