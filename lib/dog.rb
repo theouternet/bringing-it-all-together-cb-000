@@ -55,7 +55,10 @@ end
   end 
   
   def self.find_by_id
-Deg
+  sql = <<-SQL
+    INSERT INTO dogs (name, breed) VALUES (?, ?)
+    SQL
+  DB[:conn].execute(sql, self.name,self.breed)
     
     
   end 
